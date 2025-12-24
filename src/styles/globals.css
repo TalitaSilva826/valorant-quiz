@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.valorant-title-shadow {
+  text-shadow:
+    0 4px 12px rgba(0,0,0,0.6),
+    0 8px 32px rgba(0,0,0,0.4);
+}
+
+/* Transição de tela (Home, Quiz, Result) */
+.page-enter {
+  animation: pageEnter 320ms ease-out both;
+}
+@keyframes pageEnter {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Transição de pergunta */
+.q-enter {
+  animation: qEnter 220ms ease-out both;
+}
+.q-exit {
+  animation: qExit 220ms ease-in both;
+}
+@keyframes qEnter {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes qExit {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-8px); }
+}
+
+/* Animação da barrinha subindo */
+.progress-fill {
+  transition: width 520ms ease-out;
+}
